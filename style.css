@@ -1,0 +1,324 @@
+/* *************** common css for all pages ************** */
+
+* {
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+    color: #777777;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-size: 20px;
+    background-color: #4aaaa5;
+    bottom: 0;
+  }
+  
+  h2 {
+    font-family: "Georgia", Times, Times New Roman, serif;
+    color: #4aaaa5;
+    font-size: 24px;
+  }
+  .myname {
+    color: black;
+    float: left;
+    background-color: #4aaaa5;
+    padding: 25px;
+    line-height: 30px;
+    margin: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  .myname,
+  button {
+    color: #ffffff;
+  }
+  .container {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .menu {
+    position: relative;
+    width: 960px;
+    height: 80px;
+    margin: auto;
+    background-color: #ffffff;
+  }
+  .options {
+    position: absolute;
+    right: 0;
+    padding: 25px;
+    line-height: 30px;
+    padding-right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 0;
+    color: #777777;
+  }
+  li:not(:first-child)::before {
+    content: " | ";
+    margin: 10px;
+    opacity: 0.1;
+  }
+  a {
+    text-decoration: none;
+  }
+  .main {
+    background-image: url(../images/concrete_seamless.png);
+    padding-bottom: 200px;
+    padding-top: 30px;
+    margin-top: 0;
+  }
+  .info {
+    width: 960px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  .content-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .content-section {
+    padding: 25px;
+    overflow: auto;
+  }
+  footer {
+    /*   position: absolute; */
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    background-color: #666666;
+    color: #dddddd;
+    bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 12px;
+  }
+  hr {
+    margin: 10px 0;
+    margin-bottom: 0;
+  }
+  
+  /* about page css  */
+  
+  .about-content {
+    position: relative;
+    white-space: nowrap;
+    margin-top: 0;
+  }
+  
+  .profile-image {
+    float: left;
+    position: relative;
+    width: 270px;
+    margin: 0 20px;
+    margin-left: 0px;
+    margin-top: 0;
+    padding-top: 0;
+    bottom: -10px;
+  }
+  
+  .about-me{
+    top: 0;
+    line-height: 2em;
+    font-size: 18px;
+    padding-top: 0;
+    color: #777777;
+  }
+  
+  .about-brief:nth-child(1) {
+    margin-top: 10px;
+  }
+  
+  /*  portfolio page */
+  
+  .portfolio {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .images {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #4aaaa5;
+    float: left;
+    margin: 10px;
+    margin-left: 0;
+  }
+  .images p a {
+    position: absolute;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #4aaaa5;
+    bottom: 10px;
+    text-align: center;
+    color: #dddddd;
+  }
+  .images img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* **************** contact page css ********************* */
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0 10px;
+    line-height: 30px;
+    border-style: inset;
+    border: 1px solid;
+    margin-top: 5px;
+  }
+  label {
+    vertical-align: -1em;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 0;
+    color: #777777;
+  }
+  
+  button {
+    background-color: teal;
+    vertical-align: -1em;
+    font-size: 18px;
+    padding: 5px 20px;
+    line-height: 1.5em;
+    border: none;
+  }
+  label:nth-child(1) {
+    margin-top: 10px;
+  }
+  
+  /* **************************** Media queries ************************* */
+  
+  /* 980px */
+  @media only screen and (max-width: 980px) {
+    body {
+      width: 100%;
+      max-width: 980px;
+    }
+    .menu {
+      width: 100%;
+      max-width: 980px;
+    }
+  
+    .info {
+      margin: 0 40px;
+      width: 60%;
+    }
+    .myname {
+      margin-left: 40px;
+    }
+    .options {
+      right: 40px;
+    }
+    .main {
+      padding-top: 40px;
+    }
+    textarea {
+      border: 1px solid gray;
+      margin-top: 5px;
+    }
+    .images {
+      width: 50%;
+      max-width: 243px;
+      max-height: 180px;
+    }
+    .images:nth-of-type(even) {
+      margin-right: 0;
+      left: 40px;
+    }
+  }
+  
+  /* 768px */
+  @media only screen and (max-width: 768px) {
+    body {
+      width: 100%;
+    }
+    .main {
+      width: 100%;
+  
+      padding-top: 20px;
+    }
+    .menu {
+      width: 100%;
+      max-width: 768px;
+    }
+    .info {
+      width: 100%;
+      margin: 0 20px;
+      max-width: 728px;
+    }
+    .myname {
+      margin-left: 20px;
+    }
+    .options {
+      right: 20px;
+    }
+    .content-section {
+      width: 100%;
+      max-width: 768px;
+    }
+    .images {
+      width: 50%;
+      max-width: 313px;
+      max-height: 300px;
+    }
+    .images:nth-of-type(even) {
+      margin-right: 0;
+      left: 40px;
+    }
+  }
+  
+  /* 640px */
+  @media only screen and (max-width: 640px) {
+    .options {
+      position: static;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      max-width: 640px;
+      padding: 0;
+      font-size: 16px;
+    }
+  
+    .myname {
+      position: static;
+      width: 100%;
+      max-width: 640px;
+      margin: 0;
+      padding: 10px;
+    }
+    .info {
+      width: 100%;
+      margin: 0 20px;
+      max-width: 595px;
+    }
+    .menu {
+      width: 100%;
+      max-width: 640px;
+    }
+    .images {
+      width: 100%;
+      max-width: 543px;
+      height: 500px;
+    }
+    .images:nth-of-type(even) {
+      margin-right: 0;
+      left: 0;
+    }
+    .profile-image {
+      float: none;
+      width: 100%;
+    }
+  }
